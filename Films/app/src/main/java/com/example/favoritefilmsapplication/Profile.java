@@ -60,13 +60,13 @@ public class Profile extends AppCompatActivity {
         name = findViewById(R.id.name);
         mail = findViewById(R.id.mail);
 
-//        signInAccount = GoogleSignIn.getLastSignedInAccount(this);
-//        if(signInAccount != null){
-//            name.setText(signInAccount.getDisplayName());
-//            mail.setText(signInAccount.getEmail());
-//        }
-        Intent intent = new Intent(Profile.this, MainActivity.class);
-        startActivity(intent);
+        signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if(signInAccount != null){
+            name.setText(signInAccount.getDisplayName());
+            mail.setText(signInAccount.getEmail());
+        }
+//        Intent intent = new Intent(Profile.this, MainActivity.class);
+//        startActivity(intent);
         getFavMovies();
 
 
@@ -92,10 +92,10 @@ public class Profile extends AppCompatActivity {
                 int film_id = db.movie_manager().getFilmId(id);
                 if (film_id==0) {
                     int count = db.movie_manager().getNumberOfRows() + 2;
-                    db.movie_manager().insert(new MovieList(count, id, 1, category, "06.06.2021"));
+                    db.movie_manager().insert(new MovieList(count, id,signInAccount.getEmail, category, "06.06.2021"));
                     Log.d("mytag", "insert");
                 } else {
-                    db.movie_manager().delete(new MovieList(film_id, id, 1, category, "06.06.2021"));
+                    db.movie_manager().delete(new MovieList(film_id, id, signInAccount.getEmail, category, "06.06.2021"));
                     Intent intent = new Intent(Profile.this, Profile.class);
                     startActivity(intent);
                     Log.d("mytag", "delete");
@@ -140,7 +140,7 @@ public class Profile extends AppCompatActivity {
         new Thread() {
             @Override
             public void run() {
-                int user_id = users_db.user_manager().findByMail("katrin.zxr@gmail.com");
+                int user_id = users_db.user_manager().findByMail(signInAccount.getEmail);
                 Log.d("mytag", String.valueOf(db.movie_manager().getNumberOfRows()));
                 Log.d("mytag", String.valueOf(user_id));
                 if (user_id!=0) {
@@ -157,7 +157,7 @@ public class Profile extends AppCompatActivity {
                     c.close();
                 } else {
                     int count = users_db.user_manager().getNumberOfRows()+1;
-                    users_db.user_manager().insert(new Users(count, "katrin.zxr@gmail.com"));
+                    users_db.user_manager().insert(new Users(count, signInAccount.getEmail));
                 }
             }
         }.start();
@@ -169,7 +169,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public void run() {
 
-                int user_id = users_db.user_manager().findByMail("katrin.zxr@gmail.com");
+                int user_id = users_db.user_manager().findByMail(signInAccount.getEmail);
 
                 if (user_id!=0) {
                     c = db.query("SELECT * FROM movies WHERE user_id="+String.valueOf(user_id)
@@ -185,7 +185,7 @@ public class Profile extends AppCompatActivity {
                     c.close();
                 } else {
                     int count = users_db.user_manager().getNumberOfRows()+1;
-                    users_db.user_manager().insert(new Users(count,"katrin.zxr@gmail.com"));
+                    users_db.user_manager().insert(new Users(count,signInAccount.getEmail));
                 }
             }
         }.start();
@@ -197,7 +197,7 @@ public class Profile extends AppCompatActivity {
             @Override
             public void run() {
 
-                int user_id = users_db.user_manager().findByMail("katrin.zxr@gmail.com");
+                int user_id = users_db.user_manager().findByMail(signInAccount.getEmail);
 
                 if (user_id!=0) {
                     c = db.query("SELECT * FROM movies WHERE user_id="+String.valueOf(user_id)
@@ -213,7 +213,7 @@ public class Profile extends AppCompatActivity {
                     c.close();
                 } else {
                     int count = users_db.user_manager().getNumberOfRows()+1;
-                    users_db.user_manager().insert(new Users(count,"katrin.zxr@gmail.com"));
+                    users_db.user_manager().insert(new Users(count,signInAccount.getEmail));
                 }
             }
         }.start();
