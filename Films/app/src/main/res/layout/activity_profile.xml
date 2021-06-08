@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    tools:context=".Profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profile_lin">
+        <RelativeLayout
+            style="@style/parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:weightSum="12">
+
+            <LinearLayout
+                style="@style/parent"
+                android:background="@drawable/header"
+                android:orientation="vertical"
+                android:layout_weight="3">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/ic_login_bk"
+                    android:contentDescription="login background"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/headerText"
+            android:layout_gravity="center"
+            android:text="Name"
+            android:layout_marginTop="30dp"/>
+
+
+        <TextView
+            android:id="@+id/mail"
+            style="@style/headerText"
+            android:layout_gravity="center"
+            android:text="mail"
+            android:layout_marginTop="60dp"/>
+
+    <LinearLayout
+
+        android:layout_width="395dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/login_back">
+
+
+    <LinearLayout
+        style="@style/linearParent">
+
+
+        <Button
+            android:id="@+id/goToList"
+            style="@style/loginButton"
+            android:layout_height="41dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:onClick="goToList"
+            android:text="go To List"
+            android:textColor="#FF9889"/>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/fav_movies_butt"
+                style="@style/loginButton2"
+                android:layout_width="124dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:layout_marginRight="5dp"
+                android:onClick="showFavMovies"
+                android:text="Favorites"
+                android:textColor="#fff"
+              />
+
+            <Button
+                android:id="@+id/wait_movies_butt"
+                style="@style/loginButton2"
+                android:layout_width="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:layout_marginRight="5dp"
+                android:onClick="showWaitMovies"
+                android:text="List"
+                android:textColor="#fff"/>
+
+            <Button
+                android:id="@+id/watch_movies_butt"
+                android:onClick="showWatchMovies"
+                style="@style/loginButton2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:text="Watched"
+                android:textColor="#fff" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+        </RelativeLayout>
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/profile_listview"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/my_custom_background"/>
+
+    </LinearLayout>
+
+</ScrollView>

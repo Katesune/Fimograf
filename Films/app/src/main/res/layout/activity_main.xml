@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/main_lin"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        style="@style/parent">
+
+        <RelativeLayout
+            style="@style/parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="12">
+
+                <LinearLayout
+                    style="@style/parent"
+                    android:background="@drawable/header"
+                    android:orientation="vertical"
+                    android:layout_weight="3">
+
+                    <ImageView
+                        style="@style/parent"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="login background"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/headerText"
+                android:layout_gravity="center"
+                android:text="Welcome to"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                style="@style/headerText"
+                android:layout_gravity="center"
+                android:text="FILMOGRAPHY!"
+                android:layout_marginTop="60dp"/>
+
+
+
+            <LinearLayout
+
+                android:layout_width="395dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/login_back">
+
+
+                <LinearLayout
+                    style="@style/linearParent">
+
+                    <TextView
+                        style="@style/headerText_log"
+                        android:layout_gravity="center"
+                        android:text="Login"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <EditText
+                            android:id="@+id/mail"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/login_email_hint"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputPassword"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin">
+
+                        <EditText
+                            android:id="@+id/pass"
+                            style="@style/modifiedEditText"
+                            android:hint="@string/login_password_hint"
+                            android:inputType="textPassword"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--   <LinearLayout-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:orientation="horizontal">-->
+
+                    <!--        <EditText-->
+                    <!--            android:id="@+id/mail"-->
+                    <!--            android:layout_width="0dp"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:layout_marginRight="10sp"-->
+                    <!--            android:layout_weight="1"-->
+                    <!--            android:inputType="textEmailAddress|textNoSuggestions"/>-->
+                    <!--        <EditText-->
+                    <!--            android:id="@+id/pass"-->
+                    <!--            android:layout_width="0dp"-->
+                    <!--            android:layout_height="wrap_content"-->
+                    <!--            android:layout_marginRight="10sp"-->
+                    <!--            android:layout_weight="1"/>-->
+
+                    <!--    </LinearLayout>-->
+                    <Button
+                        android:id="@+id/login"
+                        style="@style/loginButton"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:onClick="onSignIn"
+                        android:text="Login with email" />
+
+
+                    <!--    <Button-->
+                    <!--        android:onClick="googleSignIn"-->
+                    <!--        android:id="@+id/googleauth"-->
+                    <!--        android:layout_width="match_parent"-->
+                    <!--        android:layout_height="wrap_content"-->
+                    <!--        android:text="Login with Google"-->
+                    <!--        />-->
+                    <TextView
+                        style="@style/Or"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:text="― OR ―" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/register"
+                            style="@style/loginButton2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:layout_marginRight="50dp"
+                            android:onClick="onRegister"
+                            android:text="Register with email" />
+
+                        <Button
+                            android:id="@+id/googleauth"
+                            style="@style/loginButton2"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/loginViewsMargin"
+                            android:onClick="googleSignIn"
+                            android:text="Login with Google" />
+                        <!--        <Button-->
+                        <!--            android:onClick="onSignIn"-->
+                        <!--            android:id="@+id/login"-->
+                        <!--            android:layout_width="100dp"-->
+                        <!--            android:layout_height="wrap_content"-->
+                        <!--            android:text="Login with mail"-->
+                        <!--            android:layout_marginRight="10sp" />-->
+
+
+                        <!--        <Button-->
+                        <!--            android:onClick="onRegister"-->
+                        <!--            android:id="@+id/register"-->
+                        <!--            android:layout_width="100dp"-->
+                        <!--            android:layout_height="wrap_content"-->
+                        <!--            android:text="Register with mail"-->
+                        <!--            android:layout_marginRight="10sp" />-->
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:background="@drawable/ic_freepik__popcorns__inject_15"
+        />
+
+    <TextView
+        style="@style/Or"
+        android:layout_marginTop="20dp"
+        android:text="need to log in for further use" />
+</LinearLayout>
