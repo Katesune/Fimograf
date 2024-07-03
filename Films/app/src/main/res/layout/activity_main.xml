@@ -55,7 +55,8 @@
                 android:layout_width="395dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="140dp"
-                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/login_back">
 
 
@@ -147,9 +148,10 @@
                             style="@style/loginButton2"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="@dimen/loginViewsMargin"
-                            android:layout_marginRight="50dp"
+                            android:layout_marginRight="20dp"
                             android:onClick="onRegister"
-                            android:text="Register with email" />
+                            android:text="Register with email"
+                            android:layout_weight="1"/>
 
                         <Button
                             android:id="@+id/googleauth"
@@ -157,7 +159,8 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="@dimen/loginViewsMargin"
                             android:onClick="googleSignIn"
-                            android:text="Login with Google" />
+                            android:text="Login with Google"
+                            android:layout_weight="1"/>
                         <!--        <Button-->
                         <!--            android:onClick="onSignIn"-->
                         <!--            android:id="@+id/login"-->

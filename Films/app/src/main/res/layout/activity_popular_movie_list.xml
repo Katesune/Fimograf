@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/my_custom_background"
             android:id="@+id/listview"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
 
     </LinearLayout>
 

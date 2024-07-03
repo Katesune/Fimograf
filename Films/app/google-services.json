@@ -1,33 +1,49 @@
 {
   "project_info": {
-    "project_number": "889008813217",
-    "project_id": "favotitefilmsapplication",
-    "storage_bucket": "favotitefilmsapplication.appspot.com"
+    "project_number": "717158752236",
+    "project_id": "old-filmograf",
+    "storage_bucket": "old-filmograf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:889008813217:android:ee7c5d74fb72e0c18d2ce0",
+        "mobilesdk_app_id": "1:717158752236:android:5b9d0df1b24ba23c93aac9",
         "android_client_info": {
-          "package_name": "com.example.favoritefilmsapplication"
+          "package_name": "com.filmograf.old_filmograf"
         }
       },
       "oauth_client": [
         {
-          "client_id": "889008813217-ne73j7akgsht83nkpn43f0qkgr5dbpak.apps.googleusercontent.com",
+          "client_id": "717158752236-g7ul0f07e0uff5rr23gq34gb03aacuc8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.filmograf.old_filmograf",
+            "certificate_hash": "624adb0c5af37e9dd2c06d1944e02ff1f8a14234"
+          }
+        },
+        {
+          "client_id": "717158752236-u18a19m20qkv15masnpqa2k98k5g9gu6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.filmograf.old_filmograf",
+            "certificate_hash": "da05f303cbf2ca0c0dbd8b7778d4b8a2b630d9c8"
+          }
+        },
+        {
+          "client_id": "717158752236-83mu2p95u5dkridv95c6bdfm0n9tlhi6.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAgOGusg6rSCgA9apC0yeer8ukvW7tA9C8"
+          "current_key": "AIzaSyBBXX1H1Otq5IxyYSNpcaIPxCn2N7SDQk8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "889008813217-ne73j7akgsht83nkpn43f0qkgr5dbpak.apps.googleusercontent.com",
+              "client_id": "717158752236-83mu2p95u5dkridv95c6bdfm0n9tlhi6.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -7,7 +7,8 @@
     android:layout_height="match_parent"
     tools:context=".MovieActivity"
     android:id="@+id/moviie_lin"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:layout_margin="10dp">
 
 
 
@@ -34,7 +35,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="go To My Trailer"
+        android:text="go To Trailer"
         />
 
 </LinearLayout>

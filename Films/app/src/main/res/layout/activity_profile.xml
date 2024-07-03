@@ -50,30 +50,45 @@
             android:text="mail"
             android:layout_marginTop="60dp"/>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/logOut"
+                style="@style/logout"
+                android:layout_height="40dp"
+                android:layout_width="wrap_content"
+                android:onClick="logOut"
+                android:text="Log Out"
+                android:layout_marginTop="100dp"
+                />
+
+            </RelativeLayout>
+
     <LinearLayout
 
         android:layout_width="395dp"
         android:layout_height="match_parent"
-        android:layout_marginTop="140dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/login_back">
 
 
     <LinearLayout
         style="@style/linearParent">
 
-
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/goToList"
             style="@style/loginButton"
             android:layout_height="41dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/loginViewsMargin"
-            android:onClick="goToList"
-            android:text="go To List"
-            android:textColor="#FF9889"/>
-
-
+            android:onClick="goToPopular"
+            android:text="go To Popular"
+            android:textColor="#fff"/>
 
 
         <LinearLayout
@@ -82,7 +97,7 @@
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/fav_movies_butt"
                 style="@style/loginButton2"
                 android:layout_width="124dp"
@@ -92,27 +107,18 @@
                 android:onClick="showFavMovies"
                 android:text="Favorites"
                 android:textColor="#fff"
+                android:layout_weight="1"
               />
 
-            <Button
-                android:id="@+id/wait_movies_butt"
-                style="@style/loginButton2"
-                android:layout_width="100dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/loginViewsMargin"
-                android:layout_marginRight="5dp"
-                android:onClick="showWaitMovies"
-                android:text="List"
-                android:textColor="#fff"/>
-
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/watch_movies_butt"
                 android:onClick="showWatchMovies"
                 style="@style/loginButton2"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:text="Watched"
-                android:textColor="#fff" />
+                android:textColor="#fff"
+                android:layout_weight="1"/>
 
 
         </LinearLayout>
@@ -120,15 +126,11 @@
     </LinearLayout>
         </RelativeLayout>
 
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/profile_listview"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/my_custom_background"/>
-
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profile_listview"/>
     </LinearLayout>
 
 </ScrollView>
